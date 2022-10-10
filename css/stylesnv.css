@@ -1,0 +1,351 @@
+* {
+    box-sizing: border-box;
+}
+
+*::after {
+    box-sizing: border-box;
+}
+
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Ubuntu';
+    background-color: #14213d;
+}
+
+
+/* DÉBUT Nav Bar*/
+
+nav {
+    position: fixed;
+    height: 10vh;
+    width: 100%;
+    background-color: #0b1222;
+    border-bottom: solid 2px #e5e5e5;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+    justify-content: space-between;
+}
+
+nav h1 {
+    font-size: 1.8em;
+    user-select: none;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+    height: 60px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fca311;
+    transition: 0.5s;
+}
+
+nav li a:hover {
+    color: #ffffff;
+    border-bottom: solid 1px #ffffff;
+    transition: 0.5s;
+}
+
+ul img {
+    position: relative;
+    height: 10vh;
+}
+
+.logo {
+    height: 10vh;
+}
+
+.recherche {
+    height: 4vh;
+    margin-right: 2vw;
+}
+
+
+/* FIN Nav Bar*/
+
+
+/* DÉBUT Séparateur : Les voitures favorites de nos clients  */
+
+.separateur {
+    color: #e5e5e5;
+    margin: auto;
+    width: 95vw;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6em;
+}
+
+main h2 {
+    color: white;
+}
+
+.separateur::before,
+.separateur::after {
+    content: '';
+    flex-grow: 1;
+    height: 2px;
+    background-color: #e5e5e5;
+}
+
+.separateur::before {
+    margin-right: 10px;
+}
+
+.separateur::after {
+    margin-left: 10px;
+}
+
+
+/* FIN Séparateur : Les voitures favorites de nos clients  */
+
+main {
+    padding-top: 150px;
+    padding-bottom: 2vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.marques {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+    padding-top: 10vh;
+    padding-bottom: 7vh;
+}
+
+.marque {
+    list-style-type: none;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transform: initial;
+    transition-duration: 1.5s;
+}
+
+.marque:hover {
+    transform: scale(1.2);
+    transition-duration: 2s ease-in-out;
+    padding-right: 2vh;
+    padding-left: 2vh;
+}
+
+.img-marque {
+    height: 40vh;
+    width: 15vw;
+    padding-left: 1%;
+    padding-right: 1%;
+    object-fit: cover;
+    border-radius: 5%;
+}
+
+.txt-marque {
+    position: absolute;
+    z-index: 2;
+    font-size: 2em;
+    color: white;
+    text-shadow: #0e1111 -2px 2px;
+}
+
+
+/* DÉBUT Footer*/
+
+footer {
+    height: 20vh;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    background-color: #0b1222;
+    border-top: solid 2px #e5e5e5;
+}
+
+.listfooter {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.listfooter ul {
+    list-style-type: none;
+    line-height: 2;
+    color: #fca311;
+}
+
+.listfooter ul:hover {
+    cursor: default;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.listfooter li {
+    color: #fca311;
+}
+
+.listfooter li a {
+    color: white;
+    text-decoration: none;
+}
+
+.listfooter li a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.media {
+    display: flex;
+}
+
+.social img {
+    height: 5vh;
+    margin-right: 8px;
+}
+
+
+/* FIN Footer*/
+
+@media screen and (max-width: 1400px) {
+    .txt-marque {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .marques {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 100%;
+        padding-top: 10vh;
+        padding-bottom: 7vh;
+    }
+    .img-marque {
+        height: 20vh;
+        width: 40vw;
+        padding-left: 1%;
+        padding-right: 1%;
+        object-fit: cover;
+        border-radius: 5%;
+        margin-bottom: 2vh;
+    }
+    .txt-marque {
+        font-size: 2em;
+    }
+    .marque:hover {
+        transform: scale(1.05);
+        transition-duration: 2s ease-in-out;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    nav {
+        position: relative;
+        height: 30vh;
+        width: 100%;
+        background-color: #0b1222;
+        border-bottom: solid 2px #e5e5e5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 3;
+        align-items: space-between;
+    }
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: space-between;
+        flex-direction: column;
+        height: 75%;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    ul img {
+        position: relative;
+        height: 10vh;
+    }
+    .logo {
+        height: 10vh;
+    }
+    .recherche {
+        height: 4vh;
+        margin-right: 0;
+        margin-top: 2vh;
+    }
+    footer {
+        height: 55vh;
+        padding-top: 15px;
+        padding-bottom: 5px;
+        background-color: #0b1222;
+        border-top: solid 2px #e5e5e5;
+    }
+    .listfooter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+    .listfooter ul {
+        list-style-type: none;
+        line-height: 2;
+        color: #fca311;
+    }
+    .listfooter ul:hover {
+        cursor: default;
+        color: #ffffff;
+        transition: 0.5s;
+    }
+    .media {
+        display: flex;
+    }
+    .social img {
+        height: 5vh;
+        margin-right: 8px;
+    }
+    .service {
+        padding: 0;
+    }
+    .info {
+        padding: 0;
+    }
+    .follow {
+        padding: 0;
+    }
+    .txt-marque {
+        font-size: 1.5em;
+        padding-bottom: 2vh;
+    }
+    main {
+        padding-top: 1vh;
+        padding-bottom: 0;
+    }
+}

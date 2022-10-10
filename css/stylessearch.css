@@ -1,0 +1,341 @@
+* {
+    box-sizing: border-box;
+}
+
+*::after {
+    box-sizing: border-box;
+}
+
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Ubuntu';
+    background-color: #14213d;
+}
+
+
+/* DÉBUT Nav Bar*/
+
+nav {
+    position: fixed;
+    height: 10vh;
+    width: 100%;
+    background-color: #0b1222;
+    border-bottom: solid 2px #e5e5e5;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+    justify-content: space-between;
+}
+
+nav h1 {
+    font-size: 1.8em;
+    user-select: none;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+    height: 60px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fca311;
+    transition: 0.5s;
+}
+
+nav li a:hover {
+    color: #ffffff;
+    border-bottom: solid 1px #ffffff;
+    transition: 0.5s;
+}
+
+ul img {
+    position: relative;
+    height: 10vh;
+}
+
+.logo {
+    height: 10vh;
+}
+
+.recherche {
+    height: 4vh;
+    margin-right: 2vw;
+}
+
+
+/* FIN Nav Bar*/
+
+.container_recherche {
+    padding-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.barre {
+    width: 40vw;
+    height: 5vh;
+    border-radius: 30px;
+    padding-left: 2%;
+}
+
+.envoyer {
+    height: 5vh;
+    border-radius: 15px;
+}
+
+.vehicules {
+    list-style: none;
+}
+
+.produits {
+    background-color: #e5e5e5;
+    width: 70vw;
+    border-radius: 5px;
+    height: 15vh;
+    padding-left: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 5%;
+}
+
+.liste {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    transform: initial;
+    transition-duration: 2s;
+}
+
+.liste:hover {
+    transform: scale(1.1);
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    transition-duration: 2s;
+}
+
+.img {
+    width: 20%;
+    height: 14vh;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.page {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #0b1222;
+    padding: 10px 30px;
+    border: 1px solid;
+    border-radius: 1000px;
+    display: inline-block;
+    transition: all .2s;
+    position: relative;
+}
+
+.page:hover {
+    transform: scale(1.1);
+}
+
+.produits {
+    font-size: 1.2em;
+}
+
+.rien {
+    color: #e5e5e5;
+    font-size: 2em;
+}
+
+.croix {
+    color: #e5e5e5;
+    transform: scale(1.5);
+}
+
+
+/* DÉBUT Footer*/
+
+footer {
+    height: 20vh;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    background-color: #0b1222;
+    border-top: solid 2px #e5e5e5;
+}
+
+.listfooter {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.listfooter ul {
+    list-style-type: none;
+    line-height: 2;
+    color: #fca311;
+}
+
+.listfooter ul:hover {
+    cursor: default;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.listfooter li {
+    color: #fca311;
+}
+
+.listfooter li a {
+    color: white;
+    text-decoration: none;
+}
+
+.listfooter li a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.media {
+    display: flex;
+}
+
+.social img {
+    height: 5vh;
+    margin-right: 8px;
+}
+
+
+/* FIN Footer*/
+
+@media screen and (max-width: 1250px) {
+    .produits {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .produits {
+        background-color: #e5e5e5;
+        width: 70vw;
+        border-radius: 5px;
+        height: 70vh;
+        padding-left: 0%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: space-around;
+        padding-right: 0%;
+        font-size: 1.5em;
+    }
+    .img {
+        width: 80%;
+        height: 40%;
+        background-position: center;
+        background-size: cover;
+        border-radius: 5px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    nav {
+        position: relative;
+        height: 30vh;
+        width: 100%;
+        background-color: #0b1222;
+        border-bottom: solid 2px #e5e5e5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 3;
+        align-items: space-between;
+    }
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: space-between;
+        flex-direction: column;
+        height: 75%;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    ul img {
+        position: relative;
+        height: 10vh;
+    }
+    .logo {
+        height: 10vh;
+    }
+    .recherche {
+        height: 4vh;
+        margin-right: 0;
+        margin-top: 2vh;
+    }
+    footer {
+        height: 55vh;
+        padding-top: 15px;
+        padding-bottom: 5px;
+        background-color: #0b1222;
+        border-top: solid 2px #e5e5e5;
+    }
+    .listfooter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+    .listfooter ul {
+        list-style-type: none;
+        line-height: 2;
+        color: #fca311;
+    }
+    .listfooter ul:hover {
+        cursor: default;
+        color: #ffffff;
+        transition: 0.5s;
+    }
+    .media {
+        display: flex;
+    }
+    .social img {
+        height: 5vh;
+        margin-right: 8px;
+    }
+    .service {
+        padding: 0;
+    }
+    .info {
+        padding: 0;
+    }
+    .follow {
+        padding: 0;
+    }
+    .produits {
+        font-size: 1em;
+    }
+    .page {
+        width: 80%;
+    }
+    .container_recherche {
+        min-height: 0vh;
+    }
+}

@@ -1,0 +1,354 @@
+* {
+    box-sizing: border-box;
+}
+
+*::after {
+    box-sizing: border-box;
+}
+
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Ubuntu';
+    background-color: #14213d;
+}
+
+/* DÉBUT Nav Bar*/
+
+nav {
+    position: fixed;
+    height: 10vh;
+    width: 100%;
+    background-color: #0b1222;
+    border-bottom: solid 2px #e5e5e5;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+    justify-content: space-between;
+}
+
+nav h1 {
+    font-size: 1.8em;
+    user-select: none;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+    height: 60px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fca311;
+    transition: 0.5s;
+}
+
+nav li a:hover {
+    color: #ffffff;
+    border-bottom: solid 1px #ffffff;
+    transition: 0.5s;
+}
+
+ul img {
+    position: relative;
+    height: 10vh;
+}
+
+.logo {
+    height: 10vh;
+}
+
+.recherche {
+    height: 4vh;
+    margin-right: 2vw;
+}
+
+/* FIN Nav Bar*/
+
+.titre {
+    padding-top: 10vh;
+    display: flex;
+    justify-content: center;
+    color: #e5e5e5;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    min-height: 70vh;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Information {
+    display: flex;
+    flex-direction: column;
+    background-color: #0b1222;
+    width: 40%;
+    align-items: center;
+    color: #e5e5e5;
+}
+
+label {
+    align-self: flex-start;
+    padding-left: 5%;
+    padding-top: 3vh;
+}
+
+input {
+    width: 90%;
+    height: 4vh;
+    border-radius: 10px;
+}
+
+.date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.datelab {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    align-self: center;
+    padding-left: 0;
+}
+
+.datelab label {
+    padding-left: inherit;
+}
+
+.Vehicule {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    color: #e5e5e5;
+}
+
+button {
+    background: #fca311;
+    border: 1px solid #fca311;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    user-select: none;
+    margin-top: 3vh;
+}
+
+/* DÉBUT Footer*/
+
+footer {
+    height: 20vh;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    background-color: #0b1222;
+    border-top: solid 2px #e5e5e5;
+}
+
+.listfooter {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.listfooter ul {
+    list-style-type: none;
+    line-height: 2;
+    color: #fca311;
+}
+
+.listfooter ul:hover {
+    cursor: default;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.listfooter li {
+    color: #fca311;
+}
+
+.listfooter li a {
+    color: white;
+    text-decoration: none;
+}
+
+.listfooter li a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.media {
+    display: flex;
+}
+
+.social img {
+    height: 5vh;
+    margin-right: 8px;
+}
+
+/* FIN Footer*/
+
+
+@media screen and (max-width: 1200px) {
+    .Information {
+        width: 50%;
+    }
+
+    .Vehicule {
+        width: 30%;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    .titre{
+        font-size: small;
+    }
+    
+    form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .Information {
+        display: flex;
+        flex-direction: column;
+        background-color: #0b1222;
+        width: 80%;
+        align-items: center;
+        color: #e5e5e5;
+        padding-bottom: 2vh;
+    }
+
+    .Vehicule {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        color: #e5e5e5;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    
+    nav {
+        position: relative;
+        height: 30vh;
+        width: 100%;
+        background-color: #0b1222;
+        border-bottom: solid 2px #e5e5e5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 3;
+        align-items: space-between;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: space-between;
+        flex-direction: column;
+        height: 75%;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    ul img {
+        position: relative;
+        height: 10vh;
+    }
+
+    .logo {
+        height: 10vh;
+    }
+
+    .recherche {
+        height: 4vh;
+        margin-right: 0;
+        margin-top: 2vh;
+    }
+
+    .titre{
+        padding-top: 0;
+        font-size: 0.5em;
+    }
+
+
+    footer {
+        height: 55vh;
+        padding-top: 15px;
+        padding-bottom: 5px;
+        background-color: #0b1222;
+        border-top: solid 2px #e5e5e5;
+    }
+
+    .listfooter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    .listfooter ul {
+        list-style-type: none;
+        line-height: 2;
+        color: #fca311;
+    }
+
+    .listfooter ul:hover {
+        cursor: default;
+        color: #ffffff;
+        transition: 0.5s;
+    }
+
+    .media {
+        display: flex;
+    }
+
+    .social img {
+        height: 5vh;
+        margin-right: 8px;
+    }
+
+    .service {
+        padding: 0;
+    }
+
+
+    .info {
+        padding: 0;
+    }
+
+    .follow {
+        padding: 0;
+    }
+
+}

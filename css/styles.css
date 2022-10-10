@@ -1,0 +1,603 @@
+* {
+    box-sizing: border-box;
+}
+
+*::after {
+    box-sizing: border-box;
+}
+
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Ubuntu';
+    background-color: #14213d;
+}
+
+
+/* DÉBUT Nav Bar*/
+
+nav {
+    position: fixed;
+    height: 10vh;
+    width: 100%;
+    background-color: #0b1222;
+    border-bottom: solid 2px #e5e5e5;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+    justify-content: space-between;
+}
+
+nav h1 {
+    font-size: 1.8em;
+    user-select: none;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+    height: 60px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fca311;
+    transition: 0.5s;
+}
+
+nav li a:hover {
+    color: #ffffff;
+    border-bottom: solid 1px #ffffff;
+    transition: 0.5s;
+}
+
+ul img {
+    position: relative;
+    height: 10vh;
+}
+
+.logo {
+    height: 10vh;
+}
+
+.recherche {
+    height: 4vh;
+    margin-right: 2vw;
+}
+
+
+/* FIN Nav Bar*/
+
+
+/* DÉBUT Header*/
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/AUTRE/header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: solid 2px #e5e5e5;
+    background-position: center;
+}
+
+header h1 {
+    user-select: none;
+    font-size: 9em;
+    margin: 0;
+    color: #ffffff;
+    text-shadow: #0e1111 -8px 8px;
+}
+
+
+/* FIN Header*/
+
+
+/* DÉBUT Séparateur : Les voitures favorites de nos clients  */
+
+.separateur {
+    color: #e5e5e5;
+    margin: auto;
+    padding-top: 30px;
+    margin-bottom: 30px;
+    width: 95vw;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6em;
+}
+
+.separateur::before,
+.separateur::after {
+    content: '';
+    flex-grow: 1;
+    height: 2px;
+    background-color: #e5e5e5;
+}
+
+.separateur::before {
+    margin-right: 10px;
+}
+
+.separateur::after {
+    margin-left: 10px;
+}
+
+
+/* FIN Séparateur : Les voitures favorites de nos clients  */
+
+main {
+    padding-bottom: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+/* DÉBUT Slider : Les voitures favorites de nos clients  */
+
+.js-slider {
+    width: 60vw;
+    height: 60vh;
+    border-radius: 15px;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+    user-select: none;
+}
+
+.DecaleGauche {
+    font-size: 30px;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50%;
+    text-shadow: 1px 1px 0px rgba(8, 8, 8, 1);
+    background: rgba(252, 163, 17, 1);
+    cursor: pointer;
+}
+
+.DecaleGauche:hover {
+    background: rgba(255, 214, 0, 1)
+}
+
+.DecaleDroite {
+    font-size: 30px;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50%;
+    text-shadow: 1px 1px 0px rgba(8, 8, 8, 1);
+    background: rgba(252, 163, 17, 1);
+    cursor: pointer;
+}
+
+.Play {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50%;
+    text-shadow: 1px 1px 0px rgba(8, 8, 8, 1);
+    background: rgba(252, 163, 17, 1);
+    cursor: pointer;
+}
+
+.Pause {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50%;
+    text-shadow: 1px 1px 0px rgba(8, 8, 8, 1);
+    background: rgba(252, 163, 17, 1);
+    cursor: pointer;
+}
+
+.DecaleDroite:hover {
+    background: rgba(255, 214, 0, 1)
+}
+
+.buttons {
+    position: absolute;
+    display: flex;
+    height: 6vh;
+    width: 60vw;
+    z-index: 2;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-right: 1vw;
+    padding-left: 1vw;
+}
+
+.js-slider .img-slider {
+    width: 60vw;
+    height: 60vh;
+    background-color: #212121;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    position: relative;
+}
+
+.js-slider .imgs-slider {
+    width: 180vw;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.js-slider h1 {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    position: absolute;
+    align-self: flex-end;
+    font-size: 2em;
+    color: white;
+    text-shadow: #0e1111 -2px 2px;
+}
+
+.imgs-slider {
+    display: flex;
+    width: 180vw;
+    position: relative;
+    left: 0;
+    transition: left 0.3s ease-in-out;
+}
+
+.imgs-slider.no-anime {
+    transition: none;
+}
+
+.img-voiture {
+    width: 60vw;
+}
+
+.img-slider {
+    transition-duration: 1.5s;
+}
+
+.img-slider:hover {
+    transition-duration: 2s;
+    transform: scale(1.1);
+}
+
+
+/* DÉBUT Séparateur2 : Les avis  */
+
+.separateur2 {
+    color: #e5e5e5;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 95vw;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6em;
+    padding-top: 2vh;
+}
+
+.separateur2::before,
+.separateur2::after {
+    content: '';
+    flex-grow: 1;
+    height: 2px;
+    background-color: #e5e5e5;
+}
+
+.separateur2::before {
+    margin-right: 10px;
+}
+
+.separateur2::after {
+    margin-left: 10px;
+}
+
+
+/* FIN Séparateur : Les voitures favorites de nos clients  */
+
+.avis {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 5vh;
+}
+
+.carte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20vw;
+    height: fit-content;
+    position: relative;
+    border-radius: 5px;
+    background-color: #0b1222;
+    transition: initial;
+    transition-duration: 2s;
+}
+
+.carte:hover {
+    transform: scale(1.3);
+    margin-top: 10vh;
+    transition: 2s;
+    width: 25vw;
+}
+
+.carte p {
+    margin-top: 20px;
+    padding: 20px;
+    border-bottom: 2px solid lightgray;
+    text-align: justify;
+}
+
+.carte strong {
+    color: #fca311;
+}
+
+.carte .image-avatar {
+    width: 140px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    margin-top: -60px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.45);
+}
+
+.carte img {
+    border-radius: 50%;
+}
+
+.carte .image-avatar img {
+    width: 140px;
+    height: 140px;
+}
+
+.commentaire {
+    padding: 0px 10px 10px 10px;
+    margin-top: 0px;
+    color: white;
+}
+
+.commentaire p {
+    letter-spacing: 1px;
+    padding: 0px 10px 10px 10px;
+    margin-top: 0px;
+}
+
+
+/* DÉBUT Footer*/
+
+footer {
+    height: 20vh;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    background-color: #0b1222;
+    border-top: solid 2px #e5e5e5;
+}
+
+.listfooter {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.listfooter ul {
+    list-style-type: none;
+    line-height: 2;
+    color: #fca311;
+}
+
+.listfooter ul:hover {
+    cursor: default;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.listfooter li {
+    color: #fca311;
+}
+
+.listfooter li a {
+    color: white;
+    text-decoration: none;
+}
+
+.listfooter li a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.media {
+    display: flex;
+}
+
+.social img {
+    height: 5vh;
+    margin-right: 8px;
+}
+
+
+/* FIN Footer*/
+
+@media screen and (max-width: 1200px) {
+    .avis {
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+    .carte {
+        width: 50vw;
+        margin-top: 5vh;
+    }
+    .carte:hover {
+        margin-bottom: 10vh;
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    header h1 {
+        font-size: 6em;
+    }
+    .js-slider h1 {
+        font-size: 1.2em;
+    }
+    .carte {
+        width: 80vw;
+        margin-top: 5vh;
+    }
+    .img-voiture {
+        height: 61vh;
+    }
+    .buttons {
+        height: 4vh;
+        padding-top: 3.5vh;
+        padding-right: 1vw;
+        padding-left: 1vw;
+    }
+    .DecaleGauche {
+        font-size: 27.5px;
+        width: 40px;
+        height: 40px;
+    }
+    .DecaleDroite {
+        font-size: 27.5px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    nav {
+        position: relative;
+        height: 30vh;
+        width: 100%;
+        background-color: #0b1222;
+        border-bottom: solid 2px #e5e5e5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 3;
+        align-items: space-between;
+    }
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: space-between;
+        flex-direction: column;
+        height: 75%;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    ul img {
+        position: relative;
+        height: 10vh;
+    }
+    .logo {
+        height: 10vh;
+    }
+    .recherche {
+        height: 4vh;
+        margin-right: 0;
+        margin-top: 2vh;
+    }
+    footer {
+        height: 55vh;
+        padding-top: 15px;
+        padding-bottom: 5px;
+        background-color: #0b1222;
+        border-top: solid 2px #e5e5e5;
+    }
+    .listfooter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+    .listfooter ul {
+        list-style-type: none;
+        line-height: 2;
+        color: #fca311;
+    }
+    .listfooter ul:hover {
+        cursor: default;
+        color: #ffffff;
+        transition: 0.5s;
+    }
+    .media {
+        display: flex;
+    }
+    .social img {
+        height: 5vh;
+        margin-right: 8px;
+    }
+    .service {
+        padding: 0;
+    }
+    .info {
+        padding: 0;
+    }
+    .follow {
+        padding: 0;
+    }
+    .carte:hover {
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .carte {
+        width: 80vw;
+        margin-top: 7vh;
+    }
+    .carte:hover {
+        transform: scale(1);
+        margin-bottom: 0;
+        margin-top: 7vh;
+        width: 80vw;
+    }
+}

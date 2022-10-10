@@ -1,0 +1,504 @@
+* {
+    box-sizing: border-box;
+}
+
+*::after {
+    box-sizing: border-box;
+}
+
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Ubuntu';
+    background-color: #14213d;
+}
+
+/* DÉBUT Nav Bar*/
+
+nav {
+    position: fixed;
+    height: 10vh;
+    width: 100%;
+    background-color: #0b1222;
+    border-bottom: solid 2px #e5e5e5;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+    justify-content: space-between;
+}
+
+nav h1 {
+    font-size: 1.8em;
+    user-select: none;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+    height: 60px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fca311;
+    transition: 0.5s;
+}
+
+nav li a:hover {
+    color: #ffffff;
+    border-bottom: solid 1px #ffffff;
+    transition: 0.5s;
+}
+
+ul img {
+    position: relative;
+    height: 10vh;
+}
+
+.logo {
+    height: 10vh;
+}
+
+.recherche {
+    height: 4vh;
+    margin-right: 2vw;
+}
+
+/* FIN Nav Bar*/
+
+main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 80vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+.boite-produit {
+    /* border: solid red 5px; */
+    width: 90vw;
+    min-height: 100vh;
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imgs-produit {
+    /* border: solid pink 5px;  */
+    height: 60vh;
+    width: 49%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img-produit-active {
+    /* border: solid green 5px; */
+    height: 35vh;
+    width: 39vw;
+    margin-bottom: 2vh;
+    margin-top: 1vh;
+    background-image: url('../img/PORSCHE/911/image-1.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.petites {
+    height: 20vh;
+    display: flex;
+    width: 39vw;
+    justify-content: space-between;
+}
+
+.img-produit1 {
+    /* border: solid white 5px; */
+    height: 20vh;
+    width: 12vw;
+    background-image: url('../img/PORSCHE/911/image-1.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.img-produit2 {
+    /* border: solid grey 5px; */
+    height: 20vh;
+    width: 12vw;
+    background-image: url('../img/PORSCHE/911/image-2.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.img-produit3 {
+    /* border: solid yellow 5px; */
+    height: 20vh;
+    width: 12vw;
+    background-image: url('../img/PORSCHE/911/image-3.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.txts-produit {
+    /* border: solid purple 5px; */
+    height: 60vh;
+    width: 49%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.titre-produit {
+    /* border: solid green 5px;   */
+    width: 60%;
+    height: 8vh;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1vw;
+    color: #e5e5e5;
+}
+
+
+.prix-produit {
+    /* border: solid red 5px;   */
+    width: 60%;
+    height: 8vh;
+    margin-top: 1vh;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1vw;
+    color: #e5e5e5;
+}
+
+.separateur {
+    color: #e5e5e5;
+    width: 50%;
+    margin-top: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.separateur::before {
+    content: '';
+    flex-grow: 1;
+    height: 2px;
+    background-color: #e5e5e5;
+}
+
+
+.desc-produit {
+    /* border: solid pink 5px;   */
+    width: 80%;
+    height: 20vh;
+    margin-top: 1vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    text-align: justify;
+    color: #e5e5e5;
+    line-height: 1.2;
+    font-size: 1.09em;
+}
+
+.txts-produit a {
+    background: #fca311;
+    border: 1px solid #fca311;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    width: 120px;
+    color: #FFFFFF;
+    cursor: pointer;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    user-select: none;
+    margin-top: 3vh;
+}
+
+.txts-produit a:hover,
+.txts-produit a:active {
+    background-color: #e5e5e5;
+    background-position: 0 0;
+    color: #000;
+}
+
+.txts-produit a:active {
+    opacity: .5;
+}
+
+.tout{
+    cursor: pointer;
+}
+
+/* DÉBUT Footer*/
+
+footer {
+    height: 20vh;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    background-color: #0b1222;
+    border-top: solid 2px #e5e5e5;
+}
+
+.listfooter {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.listfooter ul {
+    list-style-type: none;
+    line-height: 2;
+    color: #fca311;
+}
+
+.listfooter ul:hover {
+    cursor: default;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.listfooter li {
+    color: #fca311;
+}
+
+.listfooter li a {
+    color: white;
+    text-decoration: none;
+}
+
+.listfooter li a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.media {
+    display: flex;
+}
+
+.social img {
+    height: 5vh;
+    margin-right: 8px;
+}
+
+/* FIN Footer*/
+
+@media screen and (max-width: 1400px) {
+    .txts-produit a {
+        margin-top: 8vh;
+    }
+}
+
+@media screen and (max-width: 1175px) {
+    .boite-produit {
+        /* border: solid red 5px; */
+        width: 90vw;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    main {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .imgs-produit {
+        height: 60vh;
+        width: 80%;
+        flex-direction: column;
+    }
+
+    .img-produit-active {
+        /* border: solid green 5px; */
+        height: 35vh;
+        width: 60vw;
+    }
+    
+    .petites {
+        height: 20vh;
+        display: flex;
+        width: 60vw;
+        justify-content: space-between;
+    }
+    
+    .img-produit1 {
+        /* border: solid white 5px; */
+        height: 20vh;
+        width: 19vw;
+    }
+    
+    .img-produit2 {
+        /* border: solid grey 5px; */
+        height: 20vh;
+        width: 19vw;
+    }
+    
+    .img-produit3 {
+        /* border: solid yellow 5px; */
+        height: 20vh;
+        width: 19vw;
+    }
+
+    .separateur {
+        display: none;
+    }
+    
+    .txts-produit {
+        width: 100%;
+        height: 50%;
+    }
+
+    .txts-produit a {
+        margin-top: 0vh;
+    }
+
+    .desc-produit {
+        width: 80%;
+        height: 15vh;
+        margin-top: 1vh;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        text-align: justify;
+        color: #e5e5e5;
+        line-height: 1.2;
+        font-size: 1em;
+    }
+
+    .titre-produit {
+        /* border: solid green 5px;   */
+        justify-content: center;
+    }
+    
+    
+    .prix-produit {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .txts-produit a {
+        margin-top: 5vh;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .txts-produit a {
+        margin-top: 15vh;
+    }
+    
+    nav {
+        position: relative;
+        height: 30vh;
+        width: 100%;
+        background-color: #0b1222;
+        border-bottom: solid 2px #e5e5e5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 3;
+        align-items: space-between;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: space-between;
+        flex-direction: column;
+        height: 75%;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    ul img {
+        position: relative;
+        height: 10vh;
+    }
+
+    .logo {
+        height: 10vh;
+    }
+
+    .recherche {
+        height: 4vh;
+        margin-right: 0;
+        margin-top: 2vh;
+    }
+
+
+
+    footer {
+        height: 55vh;
+        padding-top: 15px;
+        padding-bottom: 5px;
+        background-color: #0b1222;
+        border-top: solid 2px #e5e5e5;
+    }
+
+    .listfooter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    .listfooter ul {
+        list-style-type: none;
+        line-height: 2;
+        color: #fca311;
+    }
+
+    .listfooter ul:hover {
+        cursor: default;
+        color: #ffffff;
+        transition: 0.5s;
+    }
+
+    .media {
+        display: flex;
+    }
+
+    .social img {
+        height: 5vh;
+        margin-right: 8px;
+    }
+
+    .service {
+        padding: 0;
+    }
+
+
+    .info {
+        padding: 0;
+    }
+
+    .follow {
+        padding: 0;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    .txts-produit a {
+        margin-top: 25vh;
+    }
+}
